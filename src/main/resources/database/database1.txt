@@ -1,0 +1,6 @@
+Pan Tadeusz;100
+Krzyżacy;50
+Lalka;25
+Ogniem i mieczem;75
+Potop;50
+Pan Wołodyjowski;25

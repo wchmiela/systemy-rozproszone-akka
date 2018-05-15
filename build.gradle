@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+group 'pl.edu.agh.sr.bookstore'
+version '1.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'com.typesafe.akka', name: 'akka-actor_2.12', version: '2.5.12'
+    compile group: 'com.typesafe.akka', name: 'akka-remote_2.12', version: '2.5.12'
+    compile group: 'com.typesafe.akka', name: 'akka-stream_2.12', version: '2.5.12'
+    testCompile group: 'com.typesafe.akka', name: 'akka-testkit_2.12', version: '2.5.12'
+    testCompile group: 'com.typesafe.akka', name: 'akka-stream-testkit_2.12', version: '2.5.12'
+}
