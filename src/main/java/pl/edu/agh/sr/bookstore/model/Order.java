@@ -10,4 +10,9 @@ public class Order implements Serializable {
         this.book = book;
         this.client = client;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Zamowienie: %s Klient: %s.", book.getName(), client);
+    }
 }

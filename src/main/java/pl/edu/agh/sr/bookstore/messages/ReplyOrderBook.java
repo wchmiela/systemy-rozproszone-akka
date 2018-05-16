@@ -16,10 +16,9 @@ public class ReplyOrderBook extends BookstoreReply implements Serializable {
 
     @Override
     public String toString() {
-        return String.format("%s Ksiazka: %s Cena: %s Klient: %s",
+        return String.format("%s Ksiazka: %s Klient: %s",
                 result ? "--Zamowiono--" : "--Nie zamowiono--",
-                super.getBook(),
-                super.getBook().getPrice(),
+                super.getBook().getName(),
                 super.getClient());
     }
 }

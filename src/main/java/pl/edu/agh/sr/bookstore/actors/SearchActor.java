@@ -26,7 +26,7 @@ public class SearchActor extends AbstractActor {
     public Receive createReceive() {
         return receiveBuilder().match(RequestSearchBook.class, request -> {
             getContext().actorSelection(paths.get("dba1")).tell(request, getSelf());
-            //getContext().actorSelection(paths.get("dba2")).tell(request, getSelf());
+            getContext().actorSelection(paths.get("dba2")).tell(request, getSelf());
         }).match(ReplySearchBook.class, reply -> {
             context().actorSelection(serverPath).tell(reply, self());
         }).build();

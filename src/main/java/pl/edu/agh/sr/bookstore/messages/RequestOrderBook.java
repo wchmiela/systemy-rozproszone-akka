@@ -11,8 +11,12 @@ public class RequestOrderBook extends BookstoreRequest {
         this.bookName = bookName;
     }
 
+    public String getBookName() {
+        return bookName;
+    }
+
     @Override
     public String toString() {
-        return String.format("--Zamowienie-- Ksiazka: %s Klient: %s", bookName, super.getClient());
+        return String.format("-Zamowienie- Ksiazka: %s Klient: %s", bookName, super.getClient());
     }
 }
