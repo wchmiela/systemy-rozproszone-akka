@@ -14,9 +14,9 @@ public class ReplySearchBook extends BookstoreReply {
 
     @Override
     public String toString() {
-        return String.format("%s Ksiazka: %s Cena: %s Klient: %s",
-                result ? "--Znaleziono--" : "--Nie znaleziono--",
-                super.getBook(),
+        return String.format("%s Ksiazka: %s Cena: %s Klient: %s.",
+                result ? "Znaleziono---" : "Nie znaleziono---",
+                super.getBook().getName(),
                 super.getBook().getPrice(),
                 super.getClient());
     }

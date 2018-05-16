@@ -3,7 +3,9 @@ package pl.edu.agh.sr.bookstore.messages;
 import pl.edu.agh.sr.bookstore.model.Book;
 import pl.edu.agh.sr.bookstore.model.Client;
 
-public abstract class BookstoreReply {
+import java.io.Serializable;
+
+public abstract class BookstoreReply implements Serializable {
 
     private final Book book;
     private final Client client;

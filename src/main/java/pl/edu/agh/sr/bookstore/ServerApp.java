@@ -5,10 +5,7 @@ import akka.actor.ActorSystem;
 import akka.actor.Props;
 import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
-import pl.edu.agh.sr.bookstore.actors.OrderActor;
-import pl.edu.agh.sr.bookstore.actors.SearchActor;
 import pl.edu.agh.sr.bookstore.actors.ServerActor;
-import pl.edu.agh.sr.bookstore.actors.StreamActor;
 import pl.edu.agh.sr.bookstore.model.Bookstore;
 
 import java.io.BufferedReader;

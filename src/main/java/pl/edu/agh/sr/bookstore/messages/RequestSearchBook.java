@@ -13,6 +13,10 @@ public final class RequestSearchBook extends BookstoreRequest {
 
     @Override
     public String toString() {
-        return String.format("--Wyszukiwanie-- Ksiazka: %s Klient: %s", bookName, super.getClient());
+        return String.format("Wyszukiwanie--- Ksiazka: %s Klient: %s", bookName, super.getClient());
+    }
+
+    public String getBookName() {
+        return bookName;
     }
 }
