@@ -56,7 +56,7 @@ public class ClientApp {
         do {
             try {
                 option = Integer.parseInt(bufferedReader.readLine());
-            } catch (IOException e) {
+            } catch (IOException | NumberFormatException e) {
                 System.out.println("Wystapil blad z wczytaniem menu.");
             }
         } while (performTask(client, clientActor, option));

@@ -17,12 +17,9 @@ public class OrderActor extends AbstractActor {
 
     private final static String ordersPath = "/home/wojtek/Dropbox/Studia/Semestr_6/Systemy_rozproszone/Laboratoria/Lab_5_Akka/bookstore/src/main/resources/orders.txt";
 
-
     @Override
     public Receive createReceive() {
         return receiveBuilder().match(RequestOrderBook.class, request -> {
-            //todo search first
-
             File file = new File(ordersPath);
             if (!file.exists()) {
                 file.createNewFile();
@@ -38,7 +35,7 @@ public class OrderActor extends AbstractActor {
         }).build();
     }
 
-    private synchronized void writeToFile(File file, Order order) throws IOException {
+    private void writeToFile(File file, Order order) throws IOException {
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file, true));
 
         bufferedWriter.write(order.toString() + "\n");

@@ -15,4 +15,8 @@ public class RequestStreamBook extends BookstoreRequest {
     public String toString() {
         return String.format("Operacja - Ksiazka do strumieniowania: %s od Klienta: %s", bookName, super.getClient());
     }
+
+    public String getBookName() {
+        return bookName;
+    }
 }

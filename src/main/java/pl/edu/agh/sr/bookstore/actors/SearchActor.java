@@ -1,9 +1,13 @@
 package pl.edu.agh.sr.bookstore.actors;
 
 import akka.actor.AbstractActor;
+import akka.actor.OneForOneStrategy;
 import akka.actor.Props;
+import akka.actor.SupervisorStrategy;
+import akka.japi.pf.DeciderBuilder;
 import pl.edu.agh.sr.bookstore.messages.ReplySearchBook;
 import pl.edu.agh.sr.bookstore.messages.RequestSearchBook;
+import scala.concurrent.duration.Duration;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -30,5 +34,15 @@ public class SearchActor extends AbstractActor {
         }).match(ReplySearchBook.class, reply -> {
             context().actorSelection(serverPath).tell(reply, self());
         }).build();
+    }
+
+    private static SupervisorStrategy strategy
+            = new OneForOneStrategy(10, Duration.create("1 minute"), DeciderBuilder.
+            matchAny(o -> SupervisorStrategy.restart()).
+            build());
+
+    @Override
+    public SupervisorStrategy supervisorStrategy() {
+        return strategy;
     }
 }

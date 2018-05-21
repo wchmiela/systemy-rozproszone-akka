@@ -3,7 +3,6 @@ package pl.edu.agh.sr.bookstore.actors;
 import akka.actor.AbstractActor;
 import pl.edu.agh.sr.bookstore.messages.BookstoreReply;
 import pl.edu.agh.sr.bookstore.messages.BookstoreRequest;
-import scala.Option;
 
 public class ClientActor extends AbstractActor {
 

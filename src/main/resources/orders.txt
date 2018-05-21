@@ -1,5 +1,1 @@
 Zamowienie: Pan Tadeusz Klient: Jan Kowalski.
-Zamowienie: testowa ksiazka Klient: Jan Kowalski.
-Zamowienie: test Klient: Jan Kowalski.
-Zamowienie: test Klient: Jan Kowalski.
-Zamowienie: test3 Klient: Jan Kowalski.
